@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D09_L7 Store | متجر الحسابات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-section" class="card">
+            <h2>تسجيل الدخول / إنشاء حساب</h2>
+            <input type="text" id="username" placeholder="اسم المستخدم">
+            <input type="password" id="password" placeholder="كلمة المرور">
+            <button onclick="authAction()">دخول / تسجيل</button>
+        </div>
+
+        <div id="user-panel" class="card hidden">
+            <div class="header">
+                <h3>أهلاً، <span id="user-name-display"></span></h3>
+                <p>نقاطك: <span id="points-display">0</span></p>
+            </div>
+            <button class="gen-btn" onclick="generateAccount()">توليد حساب (10 نقاط)</button>
+            <div id="result-area"></div>
+            <button class="insta-btn" onclick="window.location.href='https://instagram.com/D09_L7'">شراء نقاط من D09_L7</button>
+            <button onclick="logout()" class="logout-btn">خروج</button>
+        </div>
+
+        <div id="admin-panel" class="card admin-card hidden">
+            <h2>لوحة تحكم الأدمن D09_L7</h2>
+            <div class="admin-tool">
+                <input type="text" id="target-user" placeholder="يوزر المستخدم">
+                <input type="number" id="add-pts-val" placeholder="عدد النقاط">
+                <button onclick="adminAddPoints()">إرسال النقاط</button>
+            </div>
+            <hr>
+            <h3>نشر إعلان</h3>
+            <input type="text" id="ad-title" placeholder="عنوان الإعلان">
+            <input type="text" id="ad-img" placeholder="رابط الصورة">
+            <button onclick="postAd()">نشر الإعلان</button>
+            <div id="ads-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
